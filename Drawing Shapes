@@ -1,0 +1,17 @@
+def boxprint(symbol, width, height):
+    if len(symbol) > 1:
+        raise Exception(f"symbol'{symbol}' needs to be string of length 1")
+    if (width < 2 or height < 2):
+        raise Exception(f"width'{width}' and  height '{height}' should be greater then 2")
+    print(symbol * width)
+    for i in range(height-1):
+        print(symbol + (' ' * (width-2)) + symbol)
+    print(symbol * width)
+    for i in range(height):
+        print(
+            (' ' * (width // 2)  )
+
+            + symbol )
+
+
+(boxprint('-', 18, 8))
