@@ -1,0 +1,9 @@
+import os, shutil
+path = "C:\\Users\\Sandhyaramesh\\Desktop\\delicious\\"
+moveto = "C:\\Users\\Sandhyaramesh\\Desktop\\Health\\"
+files = os.listdir(path)
+files.sort()
+for f in files:
+    src = path+f
+    dst = moveto+f
+    shutil.move(src,dst)
