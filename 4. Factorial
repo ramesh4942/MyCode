@@ -1,0 +1,22 @@
+
+#This program calculates the factorial of a given number
+
+def factorial(n):
+    """With Recursion"""
+    if n == 0 or n == 1: #Base COndition
+        return 1
+    else:
+        return n * factorial(n - 1) #Recursive Condition
+
+def factorial_without_recusion(n):
+    fact = 1
+    while n > 0:
+        fact = fact * n
+        n = n - 1
+    print(f'Factorial of {n} is {fact}')
+
+if __name__ == '__main__':
+    UserInput = int(input('Please enter the Number: '))
+    print(f'Factorial of {UserInput} with Recursion is {factorial(UserInput)}')
+    factorial_without_recusion(UserInput)
+
