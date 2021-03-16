@@ -25,5 +25,3 @@ def CharCount(userinput):
 if __name__ == '__main__':
     UserInput = input('Enter a String: ')
     print(CharCount(UserInput))
-
-2) #This program checks whether the entered number is prime or not
