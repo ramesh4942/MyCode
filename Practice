@@ -1,0 +1,27 @@
+#This program checks whether the entered number is prime or not
+1) 
+def CharCount(userinput):
+
+    dict = {}
+    for letter in userinput:
+        keys = dict.keys()
+        if letter in keys:
+            dict[letter] += 1
+        else:
+            dict[letter] = 1
+    return dict
+    
+    if __name__ == '__main__':
+    UserInput = input('Enter a String: ')
+    print(CharCount(UserInput))
+
+---------------------- Sol 2
+def CharCount(userinput):
+    d = {}
+    for letter in userinput:
+        d[letter] = userinput.count(letter)
+    return d
+
+if __name__ == '__main__':
+    UserInput = input('Enter a String: ')
+    print(CharCount(UserInput))
