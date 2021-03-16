@@ -1,0 +1,26 @@
+
+'''This function calculates the fibonacci series till the n-th term'''
+
+# def fib(number):
+#     """With Recursion
+#     base Condition = if n == 1 or n == 2 then return 1
+#     """
+#     if number == 1 or number == 2:
+#         return 1
+#     else:
+#         return fib(number - 1) + fib(number - 2)
+
+# Sol2
+
+def fib(number):
+    if number == 0:
+        return 0
+    a, b = 0, 1
+    for i in range(2, number+1):
+        b, a = a+b, b
+    return b
+
+
+if __name__ == '__main__':
+    UserInput = int(input('Enter the number: '))
+    print(fib(UserInput))
