@@ -1,0 +1,19 @@
+'''This function divides the numbers in two arrays one of even and other of odd'''
+
+def EvenOdd(numbers):
+
+    even = []
+    odd = []
+
+    for num in numbers:
+        if int(num) % 2 == 0:
+            even.append(num)
+        else:
+            odd.append(num)
+    return even, odd
+
+if __name__ == "__main__":
+    UserInput = input('Enter the numbers: ')
+    UserInput = list(UserInput.split(','))
+    even, odd = EvenOdd(UserInput)
+    print(f"Even No's: {','.join(even)}, \nOdd No's: {','.join(odd)}")
