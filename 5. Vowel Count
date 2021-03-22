@@ -1,0 +1,37 @@
+
+def countVowels(sentence):
+
+    Vowels = {}
+    count = 0
+    for letter in sentence.lower():
+        if letter in 'aeiou':
+            count += 1
+    return count
+
+def countVowels2(sentence):
+
+    Vowels = {}
+    for letter in sentence:
+        if letter in 'aeiou':
+            Vowels[letter] = sentence.count(letter)
+    return Vowels
+
+def countVowels3(sentence):
+
+    d = {}
+    for letter in sentence.lower():
+        if letter in 'aeiou':
+            keys = d.keys()
+            if letter in keys:
+                d[letter] += 1
+            else:
+                d[letter] = 1
+    return d
+
+
+
+if __name__ == '__main__':
+    UserInput = input('Enter the string to check: ')
+    print(f'Vowel Count : {countVowels(UserInput)}')
+    print(f'Vowel Count2 : {countVowels2(UserInput)}')
+    print(f'Vowel Count3 : {countVowels3(UserInput)}')
