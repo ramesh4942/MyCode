@@ -1,0 +1,22 @@
+# Logging
+
+''' This function creates a log file if any error is reported '''
+
+import logging
+def log(number):
+
+    logging.basicConfig(filename='p18-logfile_test.txt', level=logging.INFO)
+
+    if int(number) % 2 ==0:
+        print('Sucessful')
+    else:
+        print('Unsucessful, this instance will be reported. please check the log file')
+        logging.info('Invalid Entry')
+
+
+if __name__ == "__main__":
+    try:
+        UserInput = int(input('Enter a Number: '))
+        log(UserInput)
+    except:
+        print('Please enter a Valid Integer')
